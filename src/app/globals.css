@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 99%;
+    --foreground: 0 0% 15%;
+    --card: 0 0% 98%;
+    --card-foreground: 0 0% 15%;
+    --popover: 0 0% 98%;
+    --popover-foreground: 0 0% 15%;
+    --primary: 0 0% 20%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 20%;
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 50%;
+    --accent: 200 70% 65%;
+    --accent-foreground: 0 0% 20%;
+    --accent-secondary: 270 50% 70%;
+    --accent-soft: 220 60% 75%;
+    --accent-glow: 230 55% 80%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 92%;
+    --input: 0 0% 94%;
+    --ring: 200 70% 65%;
+    --radius: 0.75rem;
+    --gradient-from: 220 60% 98%;
+    --gradient-to: 270 40% 96%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 0% 20%;
+    --sidebar-primary: 0 0% 20%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 0 0% 95%;
+    --sidebar-accent-foreground: 0 0% 20%;
+    --sidebar-border: 0 0% 92%;
+    --sidebar-ring: 200 70% 65%;
+  }
+
+  .dark {
+    --background: 222 47% 7%;
+    --foreground: 210 20% 98%;
+    --card: 217 33% 11%;
+    --card-foreground: 210 20% 98%;
+    --popover: 217 33% 11%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 210 20% 98%;
+    --primary-foreground: 222 47% 7%;
+    --secondary: 217 33% 15%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 217 33% 18%;
+    --muted-foreground: 215 16% 70%;
+    --accent: 199 89% 48%;
+    --accent-foreground: 210 20% 98%;
+    --accent-secondary: 270 60% 65%;
+    --accent-soft: 200 80% 55%;
+    --accent-glow: 199 89% 55%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 217 33% 22%;
+    --input: 217 33% 15%;
+    --ring: 199 89% 48%;
+    --gradient-from: 222 47% 6%;
+    --gradient-to: 260 40% 8%;
+    --sidebar-background: 217 33% 11%;
+    --sidebar-foreground: 210 20% 98%;
+    --sidebar-primary: 210 20% 98%;
+    --sidebar-primary-foreground: 222 47% 7%;
+    --sidebar-accent: 217 33% 15%;
+    --sidebar-accent-foreground: 210 20% 98%;
+    --sidebar-border: 217 33% 22%;
+    --sidebar-ring: 199 89% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-gradient-to-br from-[hsl(var(--gradient-from))] to-[hsl(var(--gradient-to))] text-foreground;
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .carly-gradient-bg {
+    @apply bg-gradient-to-br from-[hsl(var(--gradient-from))] to-[hsl(var(--gradient-to))];
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+}
